@@ -2,7 +2,7 @@ pipeline{
   agent any
   tools {
         // Install the java version configured as "localSDK" and add it to the path.
-        java "localSDK"
+        jdk "localSDK"
     }
   stages {
     stage('build'){
