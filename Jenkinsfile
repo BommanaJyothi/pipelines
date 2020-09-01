@@ -10,6 +10,9 @@ pipeline{
   stage('compile'){
       steps{
         echo 'compile stage....'
+        javac HelloWorld.java
+        echo 'executing the java file...'
+        java HelloWorld
       }
     }
   stage('install'){
