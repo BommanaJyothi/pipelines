@@ -26,6 +26,7 @@ pipeline{
         echo 'install stage....'
       }
     }
+  }
     
    post {
     failure {
@@ -39,5 +40,4 @@ pipeline{
        body: "The pipeline is success. The pipeline URL is ${env.BUILD_URL}"
      }
     }
-  }
 }
