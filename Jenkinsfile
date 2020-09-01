@@ -31,12 +31,14 @@ pipeline{
     
    post {
     failure {
-       emailext body: '''Hello Developers,
-               Please find the below  pipeline URL is ${env.BUILD_URL}''', subject: '${currentBuild.fullDisplayName}', to: 'bommanamohan8106@gmail.com'
+       mail to: 'bommanajyothi999@gmail.com',
+             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Hello Developer, \n Something is wrong with ${env.BUILD_URL}"
       }
      success {
-        emailext body: '''Hello Developers,
-               Please find the below  pipeline URL is ${env.BUILD_URL}''', subject: '${currentBuild.fullDisplayName}', to: 'bommanamohan8106@gmail.com'
+       mail to:'bommanajyothi999@gmail.com',
+            subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Hello Developer,\n The pipeline is success. The pipeline URL is ${env.BUILD_URL}"	
      }
       always {
             echo 'One way or another, I have finished'
