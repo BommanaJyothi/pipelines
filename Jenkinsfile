@@ -40,5 +40,9 @@ pipeline{
        subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
        body: "Hello Developer,\n The pipeline is success. The pipeline URL is ${env.BUILD_URL}"
      }
+      always {
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
     }
 }
