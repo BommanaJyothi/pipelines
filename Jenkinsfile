@@ -24,7 +24,7 @@ pipeline{
   stage('install'){
       steps{
         echo 'install stage....'
-        sh "java HelloWorld1"
+        sh "java HelloWorld"
       }
     }
   }
