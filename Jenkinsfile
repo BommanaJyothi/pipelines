@@ -33,13 +33,13 @@ pipeline{
     failure {
         mail to: 'bommanajyothi999@gmail.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             emailext body: '''Hello Developer, 
+             body: '''Hello Developer, 
                      Something is wrong with ${env.BUILD_URL}'''
       }
      success {
         mail to:'bommanajyothi999@gmail.com',
        subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
-       emailext body: '''Hello Developer,
+       body: '''Hello Developer,
        The pipeline is success. The pipeline URL is ${env.BUILD_URL}'''
      }
     }
