@@ -1,5 +1,9 @@
 pipeline{
   agent any
+  tools {
+        // Install the java version configured as "localSDK" and add it to the path.
+        java "localSDK"
+    }
   stages {
     stage('build'){
       steps{
@@ -10,10 +14,10 @@ pipeline{
   stage('compile'){
       steps{
         echo 'compile stage....'
-        javac HelloWorld.java
+         bat "javac HelloWorld.java"
         echo 'compilation done'
         echo 'executing the java file...'
-        java HelloWorld
+        bat "java HelloWorld"
         echo 'executing the file...'
       }
     }
