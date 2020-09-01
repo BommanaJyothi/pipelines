@@ -39,8 +39,7 @@ pipeline{
      success {
         mail to:'bommanajyothi999@gmail.com',
        subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
-       body: '''Hello Developer,
-       The pipeline is success. The pipeline URL is ${env.BUILD_URL}'''
+       body: "Hello Developer,\n The pipeline is success. The pipeline URL is ${env.BUILD_URL}"
      }
     }
 }
