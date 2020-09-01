@@ -11,8 +11,10 @@ pipeline{
       steps{
         echo 'compile stage....'
         javac HelloWorld.java
+        echo 'compilation done'
         echo 'executing the java file...'
         java HelloWorld
+        echo 'executing the file...'
       }
     }
   stage('install'){
