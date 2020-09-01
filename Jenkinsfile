@@ -1,19 +1,21 @@
 pipeline{
-  any agent
-  stage('build'){
-    steps{
-      echo 'build stage....'
-      echo 'hello world.'
+  agent any
+  stages {
+    stage('build'){
+      steps{
+        echo 'build stage....'
+        echo 'hello world.'
+      }
     }
-  }
-stage('compile'){
-    steps{
-      echo 'compile stage....'
+  stage('compile'){
+      steps{
+        echo 'compile stage....'
+      }
     }
-  }
-stage('install'){
-    steps{
-      echo 'install stage....'
+  stage('install'){
+      steps{
+        echo 'install stage....'
+      }
     }
   }
 }
