@@ -1,0 +1,9 @@
+pipeline{
+  any agent
+  stages{
+    stage('build'){
+      sh "echo 'Hello'"
+      call.call("jenkins")
+    }
+  }
+}
